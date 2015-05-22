@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ONE Mall</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+   	<script src="js/angular-route.min.js"></script>
+   	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/jcarousel.responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<base target="_blank">
+</head>
+<body data-ng-app="mainApp" data-ng-controller="mainController">
+	<!-- *************** Top Navbar Starts ************************ -->
+	<header class="clearfix">
+	    <div id="logoDiv">
+	    	<a href="#">
+	          	<img src="images/ONEMallLogo.png" alt="ONE Mall Logo" />
+	        </a>
+	    </div>  
+
+	    <div id="headSharingIconsPanel">    	
+	    	<span class="fa fa-facebook-official" data-linking-id="sb-facebook"></span>
+	        <span class="fa fa-twitter-square" data-linking-id="sb-twitter"></span>
+	        <span class="fa fa-pinterest-square" data-linking-id="sb-pinterest"></span>
+	        <span class="fa fa-align-justify showHideMainMenu"></span>
+	    </div>
+
+	    <h1 class="description">ONE Stop Destination for All Your Shopping Needs</h1>
+	    <div class="clearfix"></div>
+	    <!-- responsive carousel start -->
+	    <div class="jcarousel-wrapper">
+            <div class="jcarousel">
+                <ul>
+                    <li><a href="http://www.amazon.in/?tag=bluehimachal-21"><img src="shopImg/Amazon.jpg" alt="Amazon Logo"></a></li>
+                    <li><a href="javascript:void(0);"><img src="shopImg/ebay.jpg" alt="ebay Logo"></a></li>
+                    <li><a href="http://dl.flipkart.com?affid=codotroni"><img src="shopImg/flipkart.jpg" alt="flipkart Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=9394&WID=50804"><img src="shopImg/Homeshop18.jpg" alt="Homeshop18 Logo"></a></li>
+                    <li><a href="http://www.infibeam.com?trackId=codotroni"><img src="shopImg/infibeam.jpg" alt="infibeam Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=9170&WID=50804"><img src="shopImg/Jabong.jpg" alt="Jabong Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=11897&WID=50804"><img src="shopImg/lenskart1.jpg" alt="lenskart Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=11531&WID=50804"><img src="shopImg/shopclues.jpg" alt="shopclues Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=8053&WID=50804"><img src="shopImg/snapdeal.jpg" alt="snapdeal Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=8422&WID=50804"><img src="shopImg/zovi.jpg" alt="zovi"></a></li>
+                </ul>
+            </div>
+
+            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+            <!--<p class="jcarousel-pagination"></p>-->
+        </div>
+        <!-- responsive carousel end --> 
+	    <div id="headNav">
+	    	<ul>
+	            <!--<li data-page-id="deals">Daily Deals</li>
+	            <li data-page-id="fashion">Fashion</li>
+	            <li data-page-id="electronics">Electronics</li>-->
+	            <!--<li>Item 3</li>
+	            <li>Item 4</a></li>
+	            <li>Item 5</li>
+	            <li>Item 6</li>-->
+	            <li data-ng-repeat="menu in mainMenuList" data-page-id="{{menu | lowercase}}">
+					<a href="#{{menu | lowercase}}">
+						{{menu}}
+					</a>
+				</li>
+	        </ul>
+	    </div>
+    </header>
+  	<!-- ************* Top Navbar Ends ********************* -->
+    <section id="topPagination" class="secPagination"></section>
+    <section class="mainContainer container" data-ng-view="">
+    </section>
+    <section id="bottomPagination" class="secPagination"></section>
+
+    <div class="clearfix"></div>
+    <footer>
+    	&copy; Suman Barick
+    </footer>
+    
+    
+  <!-- Script files -->
+  <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

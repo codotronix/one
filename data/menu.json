@@ -1,0 +1,22 @@
+{
+	"deals": 
+			[
+			"data/deals/may222015.json",
+			"data/deals/may212015.json",
+			"data/deals/may202015.json",
+			"data/deals/may182015.json",
+			"data/deals/may162015.json"
+			],	
+	
+	"fashion": 
+			[
+			"data/fashion/may162015-2.json",
+			"data/fashion/may162015.json"
+			],
+	
+	"electronics":
+			[
+			"data/electronics/testElectronics2.json",
+			"data/electronics/testElectronics.json"
+			]
+}

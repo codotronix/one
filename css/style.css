@@ -1,0 +1,288 @@
+body {
+	background: #000;
+}
+
+.hidden{
+	display: none;
+}
+
+#logoDiv {
+	padding: 3px 0 0 3px;
+	width: 207px;
+  	margin: 7px 13px 10px 5px;
+  	background: white;
+  	border-radius: 57px;
+  	overflow: hidden;
+}
+
+header {
+	margin-bottom: 10px;
+}
+
+header .description {
+	color: #FFF;
+}
+
+#headSharingIconsPanel {	
+	padding: 0 20px;
+}
+
+#pickColor {
+	height: 40px;
+	width: 40px;
+}
+
+#headSharingIconsPanel .fa {
+	display: inline-block;
+	font-size: 40px;
+	color: #cf0000;
+}
+
+#headNav {
+	margin: 10px 0;
+}
+
+#headNav ul {
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+
+#headNav ul li {
+	text-align: center;
+	border: 1px solid #CF0000;
+	cursor: pointer;
+}
+
+#headNav ul li a {
+	text-decoration: none;
+	display: block;
+	color: #CF0000;	
+}
+
+#headNav ul li a:hover,
+#headNav ul li.active a{
+	background: #CF0000;
+	color: #FFF;
+}
+
+#headNav ul li.active:hover,
+#headNav ul li.active a:hover {
+	cursor: default;
+}
+
+#colorDropDown {
+	position: absolute;
+	left: auto;
+	top: auto;
+}
+
+.jcarousel-wrapper {
+	margin: 20px 40px;
+}
+
+.jcarousel-wrapper {
+	border: none;
+}
+
+.jcarousel {
+	margin-right: 5px;
+}
+
+.jcarousel-control-prev, 
+.jcarousel-control-next {
+	background: transparent;
+	text-decoration: none !important;	
+	color: #FFF !important;
+}
+
+.jcarousel-control-prev:hover, 
+.jcarousel-control-next:hover {
+	background: rgba(255, 255, 255, .3);
+}
+
+.jcarousel-control-prev {
+	left: -32px;
+}
+
+.jcarousel-control-next {
+	right: -32px;
+}
+
+.jcarousel li {
+	border: 2px solid #FFF;
+}
+
+.jcarousel li:hover {
+	border-color: orange;
+}
+
+.mainContainer {
+	padding-bottom: 25px;
+	border-radius: 30px;
+	margin: 10px auto;
+}
+.secPagination {
+	text-align: center;
+}
+
+.secPagination ul li {
+	list-style: none;
+	display: inline-block;
+	font-size: 20px;
+	color: #261DB3;
+	border: 1px solid #261DB3;
+	padding: 5px 15px;
+	margin: 0 0 5px 5px;
+}
+
+.secPagination ul li:hover {
+	background: #261DB3;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.secPagination ul li.active {
+	background: #261DB3;
+	color: #FFF;
+}
+
+#contentContainer {
+	margin-top: 25px;
+	list-style: none;
+	padding: 0;
+}
+
+#contentContainer .itemBox {
+	border: 5px ridge rgb(238, 174, 255);
+	border-radius: 30px;
+	padding: 2px 0 0 0;
+	height: 300px;
+	text-align: center;
+	position: relative;
+	margin-bottom: 1px;
+	overflow: hidden;
+	background: #FFF;
+}
+
+#contentContainer .itemBox:hover {
+	cursor: pointer;
+	border: 5px outset #F00;
+}
+
+#contentContainer .itemBox a {
+	display: block;
+	height: 100%;
+}
+
+#contentContainer .itemInfo {
+	background: #5BFF7C;
+	height: 110px;
+	overflow: auto;
+	position: absolute;
+	top: 180px;
+	width: 100%;
+}
+
+#contentContainer span {
+	display: block;
+}
+
+#contentContainer span.itemTitle {
+	background: #A7FCFF;
+	font-size: 20px;
+}
+
+#contentContainer span.itemDesc {
+	background: #5BFF7C;
+	font-size: 17px;
+}
+
+#contentContainer .itemPic {
+	max-width: 150px;
+	max-height: 200px;
+}
+
+.old-price.price-cut {
+	text-decoration: line-through;
+}
+
+footer {
+	text-align: center;
+	color: #7C7C7C;
+	margin: 50px 0 10px 0;
+	border-top: 1px inset #FFF;
+	padding-top: 5px;
+}
+
+/******* Media Queries ***********************/
+@media (min-width:768px) {
+	#logoDiv {
+		display: inline-block;
+		float: left;
+	}
+
+	#headNav ul {
+		display: table;
+		width: 100%;		
+	}
+	
+	#headNav ul li {
+		display: table-cell;
+		border-radius: 21px;
+		font-size: 25px;
+		overflow: hidden;
+	}
+	
+	#headSharingIconsPanel {
+	    padding: 15px 20px;	
+	    float: right;
+	    display: inline-block;
+	    font-size: 50px
+	}
+	
+	#headSharingIconsPanel span:hover {
+		cursor: pointer;
+		color: #261DB3;
+	}
+
+	#headSharingIconsPanel .showHideMainMenu {
+		display: none;
+	}
+}
+
+@media (max-width:767px) {
+	#logoDiv {
+		display: block;
+	}
+	
+	header .description {
+		display: none;
+	}
+
+	#headNav ul {
+		position: absolute;
+		width: 100%;
+		background: black;
+		display: none;
+	}
+
+	#headNav ul li a {
+		padding: 10px;
+		border-bottom: 1px solid #FFF;
+	}
+
+	#headSharingIconsPanel .fa {
+		padding: 1px 3px;
+		border: 1px solid #FFF;
+		border-radius: 5px;
+		float: right;
+	}
+
+	#headSharingIconsPanel .showHideMainMenu,
+	#headSharingIconsPanel .fa-tint {
+		border: none;
+		float: none;
+	}
+
+}
