@@ -27,9 +27,9 @@ header .description {
 
 #headSharingIconsPanel {
 	position: relative;
-	width: 120px;	
+	width: 100px;	
 	float: right;
-	padding: 15px 20px;
+	padding: 15px 0;
 	display: inline-block;
 	font-size: 50px
 }
@@ -272,7 +272,7 @@ footer {
 
 @media (max-width:767px) {
 	#logoDiv {
-		/*display: block;*/
+		margin-right: 0;
 	}
 	
 	header .description {
