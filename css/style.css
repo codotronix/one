@@ -13,6 +13,8 @@ body {
   	background: white;
   	border-radius: 57px;
   	overflow: hidden;
+  	display: inline-block;
+	float: left;
 }
 
 header {
@@ -23,13 +25,33 @@ header .description {
 	color: #FFF;
 }
 
-#headSharingIconsPanel {	
-	padding: 0 20px;
+#headSharingIconsPanel {
+	position: relative;
+	width: 120px;	
+	float: right;
+	padding: 15px 20px;
+	display: inline-block;
+	font-size: 50px
 }
 
-#pickColor {
-	height: 40px;
-	width: 40px;
+#headSharingIconsPanel .fb-like,
+#headSharingIconsPanel .fb-share-button,
+#headSharingIconsPanel .twitter-share-button {
+	position: absolute !important;
+}
+
+#headSharingIconsPanel .fb-like {
+	top: -30px;
+	z-index: 2;
+}
+
+#headSharingIconsPanel .fb-share-button {
+	top: 0;
+	z-index: 1;
+}
+
+#headSharingIconsPanel .twitter-share-button {
+	top: 81px;
 }
 
 #headSharingIconsPanel .fa {
@@ -219,8 +241,7 @@ footer {
 /******* Media Queries ***********************/
 @media (min-width:768px) {
 	#logoDiv {
-		display: inline-block;
-		float: left;
+		
 	}
 
 	#headNav ul {
@@ -236,10 +257,7 @@ footer {
 	}
 	
 	#headSharingIconsPanel {
-	    padding: 15px 20px;	
-	    float: right;
-	    display: inline-block;
-	    font-size: 50px
+	    
 	}
 	
 	#headSharingIconsPanel span:hover {
@@ -247,14 +265,14 @@ footer {
 		color: #261DB3;
 	}
 
-	#headSharingIconsPanel .showHideMainMenu {
+	header .showHideMainMenu {
 		display: none;
 	}
 }
 
 @media (max-width:767px) {
 	#logoDiv {
-		display: block;
+		/*display: block;*/
 	}
 	
 	header .description {
@@ -279,10 +297,12 @@ footer {
 		float: right;
 	}
 
-	#headSharingIconsPanel .showHideMainMenu,
-	#headSharingIconsPanel .fa-tint {
-		border: none;
-		float: none;
+	header .showHideMainMenu {
+		border-radius: 20px;
+  		font-size: 30px;
+  		color: #FFF;
+  		background: #261DB3;
+  		text-align: center;
 	}
 
 }

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="mainApp" data-ng-controller="mainController">
 <head>
 	<title>ONE Mall</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<meta property="og:title" content="Online Shopping Mall"/>
+	<meta property="og:site_name" content="ONE Mall"/>
+	<meta property="og:url" content="http://one.barick.in"/>
+	<meta property="og:image" content="http://barick.in/angushop/images/share.png"/>
+	<meta property="og:description" content="ONE Mall acts as a showroom for products from a wide range of online shopping sites. It is just like an ordinary shopping mall which brings all the shops at one place."/>
 
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -12,29 +17,44 @@
    	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css"/>
+	<!--<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css"/>-->
 	<link rel="stylesheet" type="text/css" href="css/jcarousel.responsive.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="canonical" href="https://dev.twitter.com/web/tweet-button">
 	<base target="_blank">
 </head>
-<body data-ng-app="mainApp" data-ng-controller="mainController">
-	<!-- *************** Top Navbar Starts ************************ -->
+<body>
+	<!-- *************** Top Navbar Starts ************************ -->	
 	<header class="clearfix">
 	    <div id="logoDiv">
 	    	<a href="#">
 	          	<img src="images/ONEMallLogo.png" alt="ONE Mall Logo" />
 	        </a>
-	    </div>  
-
-	    <div id="headSharingIconsPanel">    	
-	    	<span class="fa fa-facebook-official" data-linking-id="sb-facebook"></span>
-	        <span class="fa fa-twitter-square" data-linking-id="sb-twitter"></span>
-	        <span class="fa fa-pinterest-square" data-linking-id="sb-pinterest"></span>
-	        <span class="fa fa-align-justify showHideMainMenu"></span>
 	    </div>
+	    <div id="headSharingIconsPanel">
+	        <!-- FACEBOOK CODE START -->	        
+	        <div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
 
-	    <h1 class="description">ONE Stop Destination for All Your Shopping Needs</h1>
+			<div class="fb-like" data-href="https://www.facebook.com/one.barick.in" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+
+			<div class="fb-share-button" data-href="http://one.barick.in" data-layout="button_count"></div>
+	        <!-- FACEBOOK CODE END -->
+
+	        <!-- TWITTER START -->
+	        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://one.barick.in" data-text="Check out The Online Shopping Mall for the Indian shoppers - The ONE Mall">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	        <!-- TWITTER END -->	        
+	    </div>	    
+	    <h1 class="description">ONE Stop Destination for All Your Shopping Needs</h1>	    
 	    <div class="clearfix"></div>
+	    <div class="showHideMainMenu">CATALOG</div>
 	    <!-- responsive carousel start -->
 	    <div class="jcarousel-wrapper">
             <div class="jcarousel">
@@ -60,13 +80,6 @@
         <!-- responsive carousel end --> 
 	    <div id="headNav">
 	    	<ul>
-	            <!--<li data-page-id="deals">Daily Deals</li>
-	            <li data-page-id="fashion">Fashion</li>
-	            <li data-page-id="electronics">Electronics</li>-->
-	            <!--<li>Item 3</li>
-	            <li>Item 4</a></li>
-	            <li>Item 5</li>
-	            <li>Item 6</li>-->
 	            <li data-ng-repeat="menu in mainMenuList" data-page-id="{{menu | lowercase}}">
 					<a href="#{{menu | lowercase}}">
 						{{menu}}
