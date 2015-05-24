@@ -47,12 +47,17 @@ header .description {
 }
 
 #headSharingIconsPanel .fb-share-button {
-	top: 0;
+	top: -6px;
 	z-index: 1;
 }
 
 #headSharingIconsPanel .twitter-share-button {
-	top: 81px;
+	top: 69px;
+}
+
+#headSharingIconsPanel .gPlusContainer {
+	position: absolute;
+	top: 65px;
 }
 
 #topAd a{
