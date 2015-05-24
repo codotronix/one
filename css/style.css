@@ -55,12 +55,6 @@ header .description {
 	top: 81px;
 }
 
-#headSharingIconsPanel .fa {
-	display: inline-block;
-	font-size: 40px;
-	color: #cf0000;
-}
-
 #headNav {
 	margin: 10px 0;
 }
@@ -294,12 +288,6 @@ footer {
 
 	#headNav ul li a {
 		padding: 10px;		
-	}
-
-	#headSharingIconsPanel .fa {
-		padding: 1px 3px;
-		border-radius: 5px;
-		float: right;
 	}
 
 	header .showHideMainMenu {
