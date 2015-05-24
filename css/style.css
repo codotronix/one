@@ -55,6 +55,14 @@ header .description {
 	top: 81px;
 }
 
+#topAd a{
+	display: block;
+	text-align: center;
+	color: #F00;
+	font-size: 18px;
+	padding: 5px;
+}
+
 #headNav {
 	margin: 10px 0;
 }
