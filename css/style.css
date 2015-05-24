@@ -287,9 +287,13 @@ footer {
 		display: none;
 	}
 
-	#headNav ul li a {
-		padding: 10px;
+	#headNav ul li {
+		border: none;
 		border-bottom: 1px solid #FFF;
+	}
+
+	#headNav ul li a {
+		padding: 10px;		
 	}
 
 	#headSharingIconsPanel .fa {
