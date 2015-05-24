@@ -1,3 +1,4 @@
+/* PROPERTY OF SUMAN BARICK */
 //this one global object to make the handshake between
 //angular and jquery smooth and to pass around objects
 var gAppObj = {};
@@ -48,9 +49,12 @@ mainApp.config(['$routeProvider',
 $(function(){
 	'use strict';
 
-var lastPageNum;
+	var lastPageNum;
+	var maxPgBtnShown = 5;
+	var halfLength = Math.floor(maxPgBtnShown/2);
+	var maxBtnEven = (maxPgBtnShown%2==0);
 
-/************************* ALL EVENTS ****************************/
+	/************************* ALL EVENTS ****************************/
 	//mobile main menu view toggle
 	$('header').on('click', '.showHideMainMenu', function (ev) {
 		ev.stopPropagation();
@@ -97,9 +101,9 @@ var lastPageNum;
 		//console.log('going to ' + (currentPageNum+1))
 	});
 
-/////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////
 
-/******************* top Carousel auto rotate ********************/
+	/******************* top Carousel auto rotate ********************/
 	var leftArrowClicked = false;
 	$('.jcarousel-control-prev').click(function () {
 		leftArrowClicked = true;
@@ -112,14 +116,13 @@ var lastPageNum;
 		else {
 			$('.jcarousel-control-next').trigger('click');
 		}
-
 		setTimeout(autoRightScroll, 2000);
 	}
 
 	autoRightScroll();
-///////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////
 
-/**************** ALL FUNCTIONS DEFINED BELOW **********************/	
+	/**************** ALL FUNCTIONS DEFINED BELOW **********************/	
 
 	/* initPage function will take the pageId and make the page for us including
  	pagination and then loading the content of the 1st page
@@ -184,6 +187,33 @@ var lastPageNum;
 			$('.left-arrow').show();
 			$('.right-arrow').show();
 		}
+
+		//show only maxPgBtnShown number of pagination buttons on the page 
+		//at a time
+		//check if TotalPages > maxPgBtnShown
+		
+		if(lastPageNum > maxPgBtnShown) {
+			var start, end;
+			if (pageNum <= halfLength) {
+				start = 1;
+				end = maxPgBtnShown;
+			} 
+			else if ((lastPageNum - pageNum) < maxPgBtnShown) {
+				start = lastPageNum - (maxPgBtnShown - 1);
+				end = lastPageNum;
+			}
+			else {
+				start = pageNum - halfLength;
+				end = maxBtnEven ? (pageNum + (halfLength - 1)) : (pageNum + halfLength);			
+			}
+
+			//show only the buttons from start to end
+			$('li[data-page-num]').hide();
+
+			for(var i= start; i<=end; i++) {
+				$('li[data-page-num="'+i+'"]').show();
+			}			
+		}
 	}
 
 	/* the function to read files via ajax call */
@@ -227,6 +257,11 @@ var lastPageNum;
 
 		$('.icon-rupee').addClass('fa fa-inr');
 	}
-//////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////
+
+	//force resize window to fix responsive carousel data cutting issue
+	window.setTimeout(function(){
+		$(window).resize();
+	},4000);
 });
 
