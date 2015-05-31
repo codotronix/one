@@ -184,6 +184,11 @@ header .description {
 	padding: 0;
 }
 
+.itemLi {
+	margin-top: 10px;
+	padding: 0 10px;
+}
+
 #contentContainer .itemBox {
 	border: 5px ridge rgb(238, 174, 255);
 	border-radius: 30px;

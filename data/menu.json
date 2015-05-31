@@ -11,6 +11,7 @@
 	
 	"fashion": 
 			[
+			"data/fashion/data_May252015-053926pm.json",	
 			"data/fashion/may162015-2.json",
 			"data/fashion/may162015.json"
 			],
@@ -19,5 +20,10 @@
 			[
 			"data/electronics/testElectronics2.json",
 			"data/electronics/testElectronics.json"
+			],
+	
+	"other":
+			[
+			"data/other/data_May252015-043539pm.json"
 			]
 }

@@ -237,18 +237,20 @@ $(function(){
 		//console.log(jsonObj.dotdList);
 
 		for(var i=0; i< itemsObjArray.length; i++) {
-			itemsHTML += '<li class="itemBox col-sm-3 col-xs-12">'
-						+	'<a href="' + itemsObjArray[i].url + '">'
-						+		'<img class="itemPic" src="' + itemsObjArray[i].imageUrls[0].url + '"/>'
-						+		'<div class="itemInfo">'	
-						+			'<span class="itemTitle">'
-						+				itemsObjArray[i].title
-						+			'</span>'
-						+			'<span class="itemDesc">'
-						+				itemsObjArray[i].description
-						+			'</span>'
-						+		'</div>'
-						+	'</a>'
+			itemsHTML += '<li class="itemLi col-sm-3 col-xs-12">'
+						+	'<div class="itemBox">'
+						+		'<a href="' + itemsObjArray[i].url + '">'
+						+			'<img class="itemPic" src="' + itemsObjArray[i].imageUrls[0].url + '"/>'
+						+			'<div class="itemInfo">'	
+						+				'<span class="itemTitle">'
+						+					itemsObjArray[i].title
+						+				'</span>'
+						+				'<span class="itemDesc">'
+						+					itemsObjArray[i].description
+						+				'</span>'
+						+			'</div>'
+						+		'</a>'
+						+	'</div>'
 						+'</li>';
 		}
 
