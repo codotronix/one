@@ -227,6 +227,7 @@ header .description {
 #contentContainer span.itemTitle {
 	background: #A7FCFF;
 	font-size: 20px;
+	border-top: 2px solid;
 }
 
 #contentContainer span.itemDesc {
@@ -245,7 +246,7 @@ header .description {
 
 footer {
 	text-align: center;
-	color: #7C7C7C;
+	color: #F00;
 	margin: 50px 0 10px 0;
 	border-top: 1px inset #FFF;
 	padding-top: 5px;

@@ -265,5 +265,9 @@ $(function(){
 	window.setTimeout(function(){
 		$(window).resize();
 	},4000);
+
+	//make footer
+	var footerHtml = '&copy; ' + (new Date()).getFullYear() + ' Suman Barick'; 
+	$('footer').html(footerHtml);
 });
 
