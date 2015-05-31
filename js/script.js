@@ -201,20 +201,19 @@ $(function(){
 		//show only maxPgBtnShown number of pagination buttons on the page 
 		//at a time
 		//check if TotalPages > maxPgBtnShown
-		
 		if(lastPageNum > maxPgBtnShown) {
 			var start, end;
-			if (pageNum <= halfLength) {
+			if (pageNum <= halfLength) {				
 				start = 1;
 				end = maxPgBtnShown;
 			} 
-			else if ((lastPageNum - pageNum) < maxPgBtnShown) {
+			else if ((lastPageNum - pageNum) < maxPgBtnShown) {				
 				start = lastPageNum - (maxPgBtnShown - 1);
 				end = lastPageNum;
 			}
-			else {
+			else {				
 				start = pageNum - halfLength;
-				end = maxBtnEven ? (pageNum + (halfLength - 1)) : (pageNum + halfLength);			
+				end = maxBtnEven ? (pageNum + (halfLength - 1)) : (Number(pageNum) + Number(halfLength));				
 			}
 
 			//show only the buttons from start to end
