@@ -36,12 +36,22 @@ mainApp.config(['$routeProvider',
 		mainApp.controller('menuController', function($scope, $route, $routeParams) {
 			$route.current.templateUrl = '/' + $routeParams.name + ".html";
 			var pageName = $routeParams.name;
-			var arrayOfSubPages = $scope.mainMenuObj[pageName];
-			//console.log(arrayOfSubPages);
-			//mark this menu as active
-			$('li[data-page-id]').removeClass('active');
-			$('li[data-page-id="'+pageName+'"]').addClass('active');
-			gAppObj.initPage(pageName);
+
+			function loadPage () {
+				//check if mainObj is populated yet
+				if($scope.mainMenuObj != 'undefined') {
+					//mark this menu as active
+					$('li[data-page-id]').removeClass('active');
+					$('li[data-page-id="'+pageName+'"]').addClass('active');
+					gAppObj.initPage(pageName);
+				} else {
+					console.log('waiting for mainMenuObj to be populated...');
+					setTimeout(loadPage, 500);
+				}
+			}
+
+			loadPage();
+			
          });
 
 
