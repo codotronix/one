@@ -1,6 +1,7 @@
 {
 	"deals": 
 			[
+			"data/deals/aug222015.json",	
 			"data/deals/aug042015.json",
 			"data/deals/may242015.json",
 			"data/deals/may222015.json"			
