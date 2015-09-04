@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html data-ng-app="mainApp" data-ng-controller="mainController">
+<head>
+	<title>ONE Mall</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<meta property="og:title" content="Online Shopping Mall"/>
+	<meta property="og:site_name" content="ONE Mall"/>
+	<meta property="og:url" content="http://one.barick.in"/>
+	<meta property="og:image" content="http://barick.in/one/images/preview.PNG"/>
+	<meta property="og:description" content="ONE Mall acts as a showroom for products from a wide range of online shopping sites. It is just like an ordinary shopping mall which brings all the shops at one place."/>
+	<meta name="OMG-Verify-V1" content="590956-f2d2ed61-d28d-4bc2-885a-8ff0c0e65ed9" />
+
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+   	<script src="js/angular-route.min.js"></script>
+   	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jcarousel.responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="canonical" href="http://one.barick.in"/>
+	<base target="_blank">
+</head>
+<body>
+	<!-- *************** Top Navbar Starts ************************ -->	
+	<header class="clearfix">
+	    <div id="logoDiv">
+	    	<a href="#">
+	          	<img src="images/ONEMallLogo.png" alt="ONE Mall Logo" />
+	        </a>
+	    </div>
+	    <div id="headSharingIconsPanel">
+	        <!-- FACEBOOK CODE START -->
+			<div class="fb-like" data-href="https://www.facebook.com/one.barick.in" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div>
+
+			<div class="fb-share-button" data-href="http://one.barick.in" data-layout="button"></div>
+	        <!-- FACEBOOK CODE END -->
+
+	        <!-- TWITTER START -->
+	        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://one.barick.in" data-count="none" data-text="Check out The Online Shopping Mall for the Indian shoppers - The ONE Mall">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	        <!-- TWITTER END -->
+	        <!-- GOOGLE PLUS START -->
+	        <div class="gPlusContainer">
+	        	<div class="g-plusone gplusStyle" data-annotation="none" data-href="http://one.barick.in"></div>
+	        </div>
+	        <!-- GOOGLE PLUS END -->       
+	    </div>	    
+	    <h1 class="description">ONE Stop Destination for All Your Shopping Needs</h1>	    
+	    <div class="clearfix"></div>	    
+	    <!-- responsive carousel start -->
+	    <div class="jcarousel-wrapper">
+            <div class="jcarousel">
+                <ul>
+                    <li><a href="http://www.amazon.in/?tag=bluehimachal-21"><img src="shopImg/Amazon.jpg" alt="Amazon Logo"></a></li>
+                    <li><a href="javascript:void(0);"><img src="shopImg/ebay.jpg" alt="ebay Logo"></a></li>
+                    <li><a href="http://dl.flipkart.com?affid=codotroni"><img src="shopImg/flipkart.jpg" alt="flipkart Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=9394&WID=50804"><img src="shopImg/Homeshop18.jpg" alt="Homeshop18 Logo"></a></li>
+                    <li><a href="http://www.infibeam.com?trackId=codotroni"><img src="shopImg/infibeam.jpg" alt="infibeam Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=9170&WID=50804"><img src="shopImg/Jabong.jpg" alt="Jabong Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=11897&WID=50804"><img src="shopImg/lenskart1.jpg" alt="lenskart Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=11531&WID=50804"><img src="shopImg/shopclues.jpg" alt="shopclues Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=8053&WID=50804"><img src="shopImg/snapdeal.jpg" alt="snapdeal Logo"></a></li>
+                    <li><a href="http://clk.omgt5.com/?AID=590956&PID=8422&WID=50804"><img src="shopImg/zovi.jpg" alt="zovi"></a></li>
+                </ul>
+            </div>
+
+            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+            <!--<p class="jcarousel-pagination"></p>-->
+        </div>
+        <!-- responsive carousel end -->
+        <div id="topAd"><a href="http://affiliate.flipkart.com/install-app?affid=codotroni">Download Flipkart App and get Deals on the go</a></div>
+        <div class="showHideMainMenu">CLICK for CATALOG</div>
+	    <div id="headNav">
+	    	<ul>
+	            <li data-ng-repeat="menu in mainMenuList" data-page-id="{{menu | lowercase}}">
+					<a href="#{{menu | lowercase}}">
+						{{menu}}
+					</a>
+				</li>
+	        </ul>
+	    </div>
+    </header>
+  	<!-- ************* Top Navbar Ends ********************* -->
+    <section id="topPagination" class="secPagination"></section>
+    <section class="mainContainer container" data-ng-view="">
+    </section>
+    <section id="bottomPagination" class="secPagination"></section>
+
+    <div class="clearfix"></div>
+    <footer>
+    	&copy; Suman Barick
+    </footer>
+    
+    
+  <!-- Script files -->
+  <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>  
+  <!-- ALL EXTERNAL CODES -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- FB JAVASCRIPT SDK -->
+  <div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

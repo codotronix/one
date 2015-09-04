@@ -1,0 +1,42 @@
+{
+	"deals": 
+			[
+			"data/deals/aug222015.json",	
+			"data/deals/aug042015.json",
+			"data/deals/may242015.json",
+			"data/deals/may222015.json"			
+			],	
+	
+	"fashion": 
+			[
+			"data/fashion/data_May312015-111245am_1.json",
+			"data/fashion/data_May312015-111245am_2.json",
+			"data/fashion/data_May312015-111245am_3.json",
+			"data/fashion/data_May312015-111245am_4.json",
+			"data/fashion/data_May312015-111245am_5.json",
+			"data/fashion/data_May312015-111245am_6.json",
+			"data/fashion/data_May312015-111245am_7.json",
+			"data/fashion/data_May312015-111245am_8.json",
+			"data/fashion/data_May312015-111245am_9.json",
+			"data/fashion/data_May312015-111245am_10.json"
+			],
+	
+	"electronics":
+			[
+			"data/electronics/data_May312015-112857am_1.json",
+			"data/electronics/data_May312015-112857am_2.json",
+			"data/electronics/data_May312015-112857am_3.json",
+			"data/electronics/data_May312015-112857am_4.json",
+			"data/electronics/data_May312015-112857am_5.json",
+			"data/electronics/data_May312015-112857am_6.json",
+			"data/electronics/data_May312015-112857am_7.json",
+			"data/electronics/data_May312015-112857am_8.json",
+			"data/electronics/data_May312015-112857am_9.json",
+			"data/electronics/data_May312015-112857am_10.json"
+			],
+	
+	"other":
+			[
+			"data/other/data_May252015-043539pm.json"
+			]
+}
